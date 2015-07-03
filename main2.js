@@ -13,7 +13,7 @@ var makeKeyboard =
 	              	'-', '_', '=', '+','[','{',']', '}', '\\', '|',';', ':',"'",'"',',','<', '.', '>','/', '?', 
 		        ],
 		key : key,
-		shift : shift
+		shift : shift,
 		capsLock : capsLock
 	};
 	return keyboard;
