@@ -17,7 +17,8 @@ var makeKeyboard =
 		capsLock : capsLock
 	};
 	return keyboard;
-};		 
+}		
+
 	var	key = function(key){
 				var keyIndex = this.array.indexOf(key)
 				console.log(keyIndex);
