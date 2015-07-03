@@ -44,3 +44,35 @@ var makeKeyboard =
 
 
 });
+
+
+
+//Inh
+
+var keyboard = {
+	array : [1,2,3],
+	counter : function(num){
+		return this.array.length && this.array.push(1);
+
+	}
+
+};
+
+console.log(keyboard.counter());
+
+var keyboard = {
+	array : ['a','b','c'],
+	counter : function(num){
+		for(i=0;i<array.length;++i){
+			return array[i];
+		}
+
+		return this.array.length && this.array.push(1);
+
+	}
+
+};
+
+console.log(keyboard.counter());
+
+
