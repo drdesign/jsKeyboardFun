@@ -14,8 +14,9 @@ var makeKeyboard =
 		        ],
 		key : function(key){
 				var keyIndex = this.array.indexOf(key)
-				console.log(keyIndex);
-				return this.array[keyIndex];
+				var item = this.array[keyIndex];
+				var res = item.toLowerCase();
+				return res;
 			},        
 		shift : function(key){
 				var keyIndex = this.array.indexOf(key)
@@ -25,7 +26,9 @@ var makeKeyboard =
 		capsLock : function(key){
 				var keyIndex = this.array.indexOf(key)
 				console.log(keyIndex);
-				return this.array[keyIndex + 1];
+				var item = this.array[keyIndex];
+				var res = item.toUpperCase();
+				return res;
 		}
 	}
 	
