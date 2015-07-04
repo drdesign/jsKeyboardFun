@@ -12,28 +12,33 @@ var makeKeyboard =
 	          		//Special Keys
 	              	'-', '_', '=', '+','[','{',']', '}', '\\', '|',';', ':',"'",'"',',','<', '.', '>','/', '?', 
 		        ],
-		key : function(key){
+		key : key,
+		shift : shift,
+		capsLock : capsLock
+	};
+	return keyboard;
+}		
+
+	var	key = function(key){
 				var keyIndex = this.array.indexOf(key)
-				var item = this.array[keyIndex];
-				var res = item.toLowerCase();
-				return res;
-			},        
-		shift : function(key){
+				console.log(keyIndex);
+				return this.array[keyIndex];
+			};        
+	var	shift = function(key){
 				var keyIndex = this.array.indexOf(key)
 				console.log(keyIndex);
 				return this.array[keyIndex + 1];
-			},
-		capsLock : function(key){
+			};
+	var	capsLock = function(key){
 				var keyIndex = this.array.indexOf(key)
 				console.log(keyIndex);
-				var item = this.array[keyIndex];
-				var res = item.toUpperCase();
-				return res;
-		}
-	}
-	
-})();
+				return this.array[keyIndex + 1];
 
+	};
+
+	return makeKeyboard;
+
+})();
 
 // var Keyboard = new makeKeyboard();
 // console.log("keyboard.key(key); will return lowercase key");
