@@ -1,6 +1,6 @@
-var makeKeyboard =
+// var keyboard =
 
-(function (){
+// (function (){
 
 	var keyboard = {
 		array : [
@@ -20,8 +20,17 @@ var makeKeyboard =
 			},        
 		shift : function(key){
 				var keyIndex = this.array.indexOf(key)
-				console.log(keyIndex);
-				return this.array[keyIndex + 1];
+
+				if(keyIndex > 50){
+					var item = this.array[keyIndex];
+					console.log(keyIndex);
+					return this.array[keyIndex + 1];
+					
+				} else {
+					var item = this.array[keyIndex];
+					var res = item.toUpperCase();
+					return res;
+				};
 			},
 		capsLock : function(key){
 				var keyIndex = this.array.indexOf(key)
@@ -32,7 +41,7 @@ var makeKeyboard =
 		}
 	}
 	
-})();
+// })();
 
 
 // var Keyboard = new makeKeyboard();
