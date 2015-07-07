@@ -15,10 +15,19 @@
 	              	'-', '_', '=', '+','[','{',']', '}', '\\', '|',';', ':',"'",'"',',','<', '.', '>','/', '?', 
 		        ],
 		key : function(key){
+			var keyIndex = this.array.indexOf(key);
+
+			if(keyIndex > 50){
+				var item = this.array[keyIndex];
+				console.log(keyIndex);
+				return this.array[keyIndex - 1];
+				
+			} else {
 				var keyIndex = this.array.indexOf(key)
 				var item = this.array[keyIndex];
 				var res = item.toLowerCase();
 				return res;
+				};
 			},        
 		shift : function(key){
 				var keyIndex = this.array.indexOf(key)
@@ -35,7 +44,7 @@
 				};
 			},
 		capsLock : function(key){
-				var keyIndex = this.array.indexOf(key)
+				var keyIndex = this.array.indexOf(key);
 
 				if(keyIndex > 50){
 					var item = this.array[keyIndex];
@@ -49,7 +58,7 @@
 				}
 			},
 		type : function(key){
-				var keyIndex = this.array.indexOf(key)
+				var keyIndex = this.array.indexOf(key);
 				var item = this.array[keyIndex];
 				var word = [];
 				var addWord = word.push(key);
