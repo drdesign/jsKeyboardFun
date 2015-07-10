@@ -1,4 +1,4 @@
-// var keyboard =
+// var kb =
 
 // (function (){
 
@@ -8,24 +8,27 @@
 				  	// 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s', 't','u','v','w','x','y','z', 
 	          		//alphabet	
 				  	'a','A','b', 'B','c', 'C','d', 'D', 'e', 'E', 'f', 'F', 'g', 'G', 'h', 'H', 'i', 'I', 'j', 'J', 'k', 'K', 'l', 'L', 'm', 'M', 'n', 'N', 
-	          		'o', 'O', 'p', 'P', 'q', 'Q', 'r', 'R', 's', 't', 'T', 'u', 'U', 'v', 'V', 'w', 'W','x', 'X', 'y', 'Y', 'z', 'Z', 
+	          		'o', 'O', 'p', 'P', 'q', 'Q', 'r', 'R', 's', 'S', 't', 'T', 'u', 'U', 'v', 'V', 'w', 'W','x', 'X', 'y', 'Y', 'z', 'Z', 
 	          		//numbers 
 	              	'1', '!', '2', '@', '3', '4', '$', '5', '%', '6', '^', '7', '&', '8', '*', '9', '(', '0', ')', 
 	          		//Special Keys
 	              	'-', '_', '=', '+','[','{',']', '}', '\\', '|',';', ':',"'",'"',',','<', '.', '>','/', '?', 
 		        ],
+		arrayType : [],
+		        
 		key : function(key){
 			var keyIndex = this.array.indexOf(key);
 
-			if(keyIndex > 50){
+			if(keyIndex >= 52){
 				var item = this.array[keyIndex];
 				console.log(keyIndex);
-				return this.array[keyIndex - 1];
-				
+				return this.array[keyIndex];
+
 			} else {
 				var keyIndex = this.array.indexOf(key)
 				var item = this.array[keyIndex];
 				var res = item.toLowerCase();
+				console.log(keyIndex);
 				return res;
 				};
 			},        
@@ -60,9 +63,9 @@
 		type : function(key){
 				var keyIndex = this.array.indexOf(key);
 				var item = this.array[keyIndex];
-				var word = [];
-				var addWord = word.push(key);
-				return word;
+				var addWord = keyboard.arrayType.push(key);
+				console.log(addWord);
+				return addWord;
 
 		}
 	};
